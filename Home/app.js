@@ -20,21 +20,20 @@ class App extends Component {
 
         const listSection = dom.querySelector('.image-placement');
         listSection.appendChild(imageListDom);
-
-        const filterImages = new FilterImages({
+        const filterImages = new FilterImages({    
             images: images,
-            onFilter: (imageHorns) => {
+            onFilter: (imagehorns) => {
                 let filteredImages;
-                if (!imageHorns) {
+                if (!imagehorns) {
                     filteredImages = images;
                 }
                 else {
-                    filteredImages = images.filter(images => {
-                        return images.horns === imageHorns;
+                    filteredImages = images.filter(image => {
+                        return image.horns === imagehorns;
                     });
                 }
                 const updateProps = { images: filteredImages };
-                imageList.updateProps(updateProps);
+                imageList.update(updateProps);
             }
         });
         const filterImagesDom = filterImages.renderDOM();
