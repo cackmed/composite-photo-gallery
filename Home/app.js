@@ -18,7 +18,7 @@ class App extends Component {
         const imageListDom = imageList.renderDom();
 
         const listSection = dom.querySelector('.list-section');
-        listSection.appendChild(imageListDOM);
+        listSection.appendChild(imageListDom);
 
         const filterImages = new FilterImages({
             images: images,
@@ -58,3 +58,4 @@ class App extends Component {
 
     }
 }
+export default App;
