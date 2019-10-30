@@ -1,0 +1,52 @@
+.background {
+    background-color: goldenrod;
+}
+* {
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-content: space-evenly;
+    height: 220px;
+    width: 100pc;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+.title {
+    padding-top: 90px;
+    font-size: 40px;
+}
+.menu-section {
+    padding-top: 20px;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+}
+.menu {
+    height: 30px;
+    width: 200px;
+}
+img {
+    height: 200px;
+    width: 200px;
+    border: 3px solid black;
+    border-radius: 5px;
+    outline: 2px solid black;
+    outline-offset: -3px;
+    grid-area: 1 / 1;
+}
+#grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    transform-style: preserve-3d;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.image-container {
+    display: grid;
+    margin: auto;
+}

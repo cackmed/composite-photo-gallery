@@ -18,7 +18,7 @@ class App extends Component {
         const imageList = new ImageList(props);
         const imageListDom = imageList.renderDOM();
 
-        const listSection = dom.querySelector('.grid');
+        const listSection = dom.querySelector('.image-placement');
         listSection.appendChild(imageListDom);
 
         const filterImages = new FilterImages({
@@ -47,9 +47,8 @@ class App extends Component {
         <div>
         
                 <main>
-                    <section class="menu-section">
-                    </section>
-                    <div class="grid"></div>
+                    <section class="menu-section"></section>
+                    <section class="image-placement"></section>
                         
                     
                 </main>
