@@ -47,13 +47,12 @@ class App extends Component {
         
                 <main>
                     <section class="menu-section">
-                        
                     </section>
-                    <div class="grid">
+                    
                         
-                    </section>
+                    
                 </main>
-            </div>
+        </div>
         `;
 
     }
