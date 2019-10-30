@@ -7,7 +7,8 @@ import images from '../data/images.js';
 class App extends Component {
     
     onRender(dom){
-        const headerDom = Header.renderDom();
+        const header = new Header;
+        const headerDom = header.renderDOM();
         dom.prepend(headerDom);
 
         const props = {
@@ -15,9 +16,9 @@ class App extends Component {
         };
 
         const imageList = new ImageList(props);
-        const imageListDom = imageList.renderDom();
+        const imageListDom = imageList.renderDOM();
 
-        const listSection = dom.querySelector('.list-section');
+        const listSection = dom.querySelector('.grid');
         listSection.appendChild(imageListDom);
 
         const filterImages = new FilterImages({
@@ -36,9 +37,9 @@ class App extends Component {
                 imageList.updateProps(updateProps);
             }
         });
-        const filterImagesDom = filterImages.renderDom();
+        const filterImagesDom = filterImages.renderDOM();
 
-        const optionsSection = dom.querySelector('.options-section');
+        const optionsSection = dom.querySelector('.menu-section');
         optionsSection.appendChild(filterImagesDom);
     }
     renderHTML() {
@@ -48,7 +49,7 @@ class App extends Component {
                 <main>
                     <section class="menu-section">
                     </section>
-                    
+                    <div class="grid"></div>
                         
                     
                 </main>

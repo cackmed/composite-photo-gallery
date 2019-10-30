@@ -1,14 +1,17 @@
-import Component from '../Component.sj';
+import Component from '../Component.js';
+
 
 class ImageItem extends Component {
-    renderHtml() {
+    renderHTML() { 
+        const image = this.props.image;
         return /*html*/` 
         <div class="image-container">
-            <img src="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg" alt="Uniwhal image">
-                <h3>Uniwhal</h3>
-                <p>Horns: 1</p>
+            <img src="${image.url}" alt="${image.title} image">
+                <h3>${image.title}</h3>
+                <p>Number of Horns:${image.horns}</p>
             </div>
     `;
     }
+    
 }
 export default ImageItem;
